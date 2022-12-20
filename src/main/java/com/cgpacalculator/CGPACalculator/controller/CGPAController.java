@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.cgpacalculator.CGPACalculator.Entity.Converter;
 import com.cgpacalculator.CGPACalculator.Entity.SemesterGPA;
 import com.cgpacalculator.CGPACalculator.Entity.Subjects;
@@ -20,6 +20,7 @@ import com.cgpacalculator.CGPACalculator.Repository.RegisterRepo;
 import com.cgpacalculator.CGPACalculator.Service.CGPACalculatorService;
 
 @RestController
+@CrossOrigin(origins="*")
 public class CGPAController {
 	
 	@Autowired
