@@ -36,7 +36,7 @@ public class SpringSecurityConfiguration {
 			}
 
 		}).and().headers().frameOptions().disable().and()
-		csrf().disable()
+		.csrf().disable()
 		.authorizeHttpRequests()
 		.requestMatchers("/hello","/dashboard","/deptsemester/**","/deptsemester/converter").authenticated()
 		.requestMatchers("/register","/subject").permitAll()
