@@ -29,6 +29,7 @@ public class SpringSecurityConfiguration {
 				config.setAllowedOrigins(Collections.singletonList("http://localhost:4200/"));
 				config.setAllowedHeaders(Collections.singletonList("*"));
 				config.setAllowedMethods(Collections.singletonList("*"));
+				config.setExposedHeaders(Collections.singletonList("Authorization"));
 				config.setAllowCredentials(true);
 				config.setMaxAge(6000L);
 				return config;
