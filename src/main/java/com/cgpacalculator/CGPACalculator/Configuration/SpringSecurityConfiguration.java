@@ -26,7 +26,7 @@ public class SpringSecurityConfiguration {
 			public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
 				
 				CorsConfiguration config=new CorsConfiguration();
-				config.setAllowedOrigins(Collections.singletonList("https://statuesque-narwhal-56e808.netlify.app/"));
+				config.setAllowedOrigins(Collections.singletonList("https://cgpacalculator-1g1ehs63l-nikhilmr2000.vercel.app/"));
 				config.addAllowedHeader("Access-Control-Allow-Origin");
 				config.addAllowedHeader("Content-Type");
 				config.setAllowedHeaders(Collections.singletonList("*"));
