@@ -27,6 +27,8 @@ public class SpringSecurityConfiguration {
 				
 				CorsConfiguration config=new CorsConfiguration();
 				config.setAllowedOrigins(Collections.singletonList("http://localhost:4200/"));
+				config.addAllowedHeader("Access-Control-Allow-Origin");
+				config.addAllowedHeader("Content-Type");
 				config.setAllowedHeaders(Collections.singletonList("*"));
 				config.setAllowedMethods(Collections.singletonList("*"));
 				config.setAllowCredentials(true);
