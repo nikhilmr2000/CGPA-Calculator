@@ -20,7 +20,6 @@ import com.cgpacalculator.CGPACalculator.Repository.RegisterRepo;
 import com.cgpacalculator.CGPACalculator.Service.CGPACalculatorService;
 
 @RestController
-@CrossOrigin(origins="*")
 public class CGPAController {
 	
 	@Autowired
