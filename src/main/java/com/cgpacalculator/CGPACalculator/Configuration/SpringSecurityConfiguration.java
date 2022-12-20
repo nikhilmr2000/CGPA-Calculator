@@ -26,7 +26,7 @@ public class SpringSecurityConfiguration {
 			public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
 				
 				CorsConfiguration config=new CorsConfiguration();
-				config.setAllowedOrigins(Collections.singletonList("https://profound-blini-6cceb3.netlify.app/"));
+				config.setAllowedOrigins(Collections.singletonList("http://localhost:4200/"));
 				config.addAllowedHeader("Access-Control-Allow-Origin");
 				config.addAllowedHeader("Content-Type");
 				config.setAllowedHeaders(Collections.singletonList("*"));
