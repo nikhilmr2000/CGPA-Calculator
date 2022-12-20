@@ -29,7 +29,7 @@ public class SpringSecurityConfiguration {
 				//config.setAllowedOrigins(Collections.singletonList("*"));
 				config.setAllowedHeaders(Collections.singletonList("*"));
 				config.setAllowedMethods(Collections.singletonList("*"));
-				config.setAllowCredentials(true);
+				//config.setAllowCredentials(true);
 				config.setMaxAge(6000L);
 				return config;
 			}
