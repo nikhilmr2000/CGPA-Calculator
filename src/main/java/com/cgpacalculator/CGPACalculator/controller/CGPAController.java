@@ -18,6 +18,7 @@ import com.cgpacalculator.CGPACalculator.Entity.Subjects;
 import com.cgpacalculator.CGPACalculator.Entity.register;
 import com.cgpacalculator.CGPACalculator.Repository.RegisterRepo;
 import com.cgpacalculator.CGPACalculator.Service.CGPACalculatorService;
+import com.cgpacalculator.CGPACalculator.Repository.SubjectRepo;
 
 @RestController
 public class CGPAController {
@@ -27,6 +28,9 @@ public class CGPAController {
 	
 	@Autowired
 	public RegisterRepo registerRepo;
+	
+	@Autowired
+	public SubjectRepo subjectRepo;
 	
 	@GetMapping("/dashboard")
 	public register getActiveUserDashboard(Authentication authentication ){
@@ -85,6 +89,18 @@ public class CGPAController {
 	public List<SemesterGPA> getSemesterGPA(@PathVariable String email){
 		List<SemesterGPA> getGPA=service.getSemesterByUser(email);
 		return getGPA;
+	}
+	
+	@DeleteMapping("/delete/subject/{code}")
+	public void deleteSubject(@PathVariable String code) {
+		
+		List<Subjects> subRepo=subjectRepo.findAll();
+		for(Subjects sub: subRepo) {
+			if(sub.getCoursecode().equals(code)) {
+				subjectRepo.deleteById(sub.getId());
+			}
+		}
+		
 	}
 	
 }
