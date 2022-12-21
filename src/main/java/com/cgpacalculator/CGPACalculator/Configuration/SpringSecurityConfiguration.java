@@ -40,7 +40,7 @@ public class SpringSecurityConfiguration {
 		.csrf().disable()
 		.authorizeHttpRequests()
 		.requestMatchers("/hello","/dashboard","/deptsemester/**","/deptsemester/converter").authenticated()
-		.requestMatchers("/register","/subject").permitAll()
+		.requestMatchers("/register","/subject","/delete/subject/*").permitAll()
 		.and().formLogin()
 		.and().httpBasic();
 		
